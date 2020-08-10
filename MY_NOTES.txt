@@ -1,0 +1,8 @@
+    "scripts": {
+    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "knex:migrate":"knex --knexfile knexfile.ts migrate:latest",
+    "knex:migrate:rollback":"knex --knexfile knexfile.ts migrate:rollback" 
+  }
+
+O knex por padrão não interpreta typescript e por 
+isso é necessario criar esses escripts no package.json 
